@@ -223,12 +223,73 @@ export default function page() {
                     </div>
                 </nav>
                 <main className="p-7 w-full flex flex-col">
-                    <div className="flex justify-between items-center bg-white p-4 rounded-sm mb-6">
-                        <div>Dashboard</div>
-                        <div>Dashboard</div>
+                    <div className="flex justify-between items-center bg-white p-4 rounded-sm mb-6 px-8 h-[68px]">
+                        <div className="flex items-center gap-3">
+                            <div>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <mask
+                                        id="mask0_2_429"
+                                        style={{ maskType: "alpha" }}
+                                        maskUnits="userSpaceOnUse"
+                                        x="0"
+                                        y="0"
+                                        width="24"
+                                        height="24"
+                                    >
+                                        <rect width="24" height="24" fill="#D9D9D9" />
+                                    </mask>
+                                    <g mask="url(#mask0_2_429)">
+                                        <path
+                                            d="M13.25 9V3.5H20.5V9H13.25ZM3.5 12.5V3.5H10.75V12.5H3.5ZM13.25 20.5V11.5H20.5V20.5H13.25ZM3.5 20.5V15H10.75V20.5H3.5Z"
+                                            fill="#3AAFA9"
+                                        />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div className="text-accent text-[16px]">Dashboard</div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <div>
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9.04163 5.49996V0.916626H15.0833V5.49996H9.04163ZM0.916626 8.41663V0.916626H6.95829V8.41663H0.916626ZM9.04163 15.0833V7.58329H15.0833V15.0833H9.04163ZM0.916626 15.0833V10.5H6.95829V15.0833H0.916626Z"
+                                        fill="#3AAFA9"
+                                    />
+                                </svg>
+                            </div>
+                            <div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-chevron-right-icon lucide-chevron-right w-[20px] text-gray-400"
+                                >
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </div>
+                            <div className="text-accent text-[14px]">Dashboard</div>
+                        </div>
                     </div>
                     <div id="statistics" className="flex gap-10 items-center bg-transparent rounded-md mb-6">
-                        <div className="flex flex-col gap-4 w-full">
+                        <div className="flex flex-col gap-5 w-full">
                             <div className="flex justify-between items-center bg-white p-6 w-[285px] h-[133px] rounded-lg">
                                 <div className="flex flex-col gap-2">
                                     <div className="text-[24px] font-semibold text-[#414853]">25</div>
@@ -407,7 +468,7 @@ export default function page() {
                                     </div>
                                 </div>
                             </div>
-                            <hr className="mt-4 text-gray-400" />
+                            <hr className="mt-4 text-gray-200" />
 
                             <div className="flex items-center gap-4 mt-4">
                                 <div>
