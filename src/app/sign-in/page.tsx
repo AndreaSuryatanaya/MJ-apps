@@ -124,8 +124,9 @@ export default function SignInPage() {
                             </button>
                         </div>
                     </form>
-                    <div></div>
-                    <p className="text-center text-[10px] sm:text-[12px] text-primary">By MJ Solution Indonesia</p>
+                    <div>
+                        <p className="text-center text-[10px] sm:text-[12px] text-primary">By MJ Solution Indonesia</p>
+                    </div>
                 </div>
             </div>
         </section>
