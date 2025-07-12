@@ -53,7 +53,7 @@ export default function page() {
                                 type="text"
                                 name="search-item"
                                 id="search-item"
-                                className="pl-10 pr-3 py-2 border h-[32px] border-gray-300 rounded-md placeholder-gray-500 text-gray-900  "
+                                className="pl-10 pr-3 py-2 border h-[32px] text-[12px] border-gray-300 rounded-md placeholder-gray-500 text-gray-900  "
                                 placeholder="Search..."
                             />
                         </div>
@@ -222,10 +222,217 @@ export default function page() {
                         </ul>
                     </div>
                 </nav>
-                <main className="p-7 w-full">
-                    <div className="flex justify-between items-center bg-white p-4 rounded-lg shadow-md mb-6">
+                <main className="p-7 w-full flex flex-col">
+                    <div className="flex justify-between items-center bg-white p-4 rounded-sm mb-6">
                         <div>Dashboard</div>
                         <div>Dashboard</div>
+                    </div>
+                    <div id="statistics" className="flex gap-10 items-center bg-transparent rounded-md mb-6">
+                        <div className="flex flex-col gap-4 w-full">
+                            <div className="flex justify-between items-center bg-white p-6 w-[285px] h-[133px] rounded-lg">
+                                <div className="flex flex-col gap-2">
+                                    <div className="text-[24px] font-semibold text-[#414853]">25</div>
+                                    <div className="text-[12px] text-[#ADB1BB]">Total Publish</div>
+                                </div>
+                                <div>
+                                    <svg
+                                        width="60"
+                                        height="60"
+                                        viewBox="0 0 60 60"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <rect width="60" height="60" rx="5.21739" fill="#EBF4FF" />
+                                        <mask
+                                            id="mask0_2_458"
+                                            style={{ maskType: "alpha" }}
+                                            maskUnits="userSpaceOnUse"
+                                            x="10"
+                                            y="10"
+                                            width="40"
+                                            height="40"
+                                        >
+                                            <rect
+                                                x="10.4348"
+                                                y="10.4348"
+                                                width="39.1304"
+                                                height="39.1304"
+                                                fill="#D9D9D9"
+                                            />
+                                        </mask>
+                                        <g mask="url(#mask0_2_458)">
+                                            <path
+                                                d="M19.0887 43.8587C18.2757 43.8587 17.5811 43.5708 17.005 42.995C16.4292 42.4189 16.1413 41.7244 16.1413 40.9113V19.0888C16.1413 18.2757 16.4292 17.5812 17.005 17.0051C17.5811 16.4293 18.2757 16.1414 19.0887 16.1414H40.9113C41.7243 16.1414 42.4189 16.4293 42.995 17.0051C43.5708 17.5812 43.8587 18.2757 43.8587 19.0888V29.4013C43.4573 29.2298 43.0554 29.0846 42.653 28.9655C42.2505 28.8462 41.8372 28.7511 41.413 28.6802V19.0888C41.413 18.9632 41.3607 18.8483 41.2561 18.7439C41.1518 18.6393 41.0368 18.587 40.9113 18.587H19.0887C18.9632 18.587 18.8482 18.6393 18.7439 18.7439C18.6393 18.8483 18.5869 18.9632 18.5869 19.0888V40.9113C18.5869 41.0369 18.6393 41.1518 18.7439 41.2562C18.8482 41.3608 18.9632 41.4131 19.0887 41.4131H28.6394C28.7 41.8645 28.7898 42.2914 28.9088 42.6938C29.0281 43.0962 29.1734 43.4846 29.3446 43.8587H19.0887ZM18.5869 41.4131V18.587V28.6802V28.5579V41.4131ZM22.2554 37.5563H28.8053C28.8765 37.1321 28.9821 36.7188 29.122 36.3164C29.2622 35.9139 29.4148 35.5121 29.5797 35.1111H22.2554V37.5563ZM22.2554 31.2229H32.5932C33.2954 30.6272 34.0447 30.1282 34.8412 29.7257C35.6376 29.3233 36.4905 29.0374 37.3997 28.8681V28.7772H22.2554V31.2229ZM22.2554 24.889H37.7446V22.4438H22.2554V24.889ZM39.7826 47.2138C37.7467 47.2138 36.0149 46.4999 34.5872 45.0722C33.1595 43.6445 32.4456 41.9127 32.4456 39.8768C32.4456 37.8409 33.1595 36.1092 34.5872 34.6814C36.0149 33.2537 37.7467 32.5399 39.7826 32.5399C41.8185 32.5399 43.5503 33.2537 44.978 34.6814C46.4057 36.1092 47.1196 37.8409 47.1196 39.8768C47.1196 41.9127 46.4057 43.6445 44.978 45.0722C43.5503 46.4999 41.8185 47.2138 39.7826 47.2138ZM39.0615 44.674H40.5037V40.5979H44.5798V39.1558H40.5037V35.0797H39.0615V39.1558H34.9855V40.5979H39.0615V44.674Z"
+                                                fill="#8280FF"
+                                            />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className="flex justify-between items-center bg-white p-6 w-[285px] h-[133px] rounded-md">
+                                <div className="flex flex-col gap-2">
+                                    <div className="text-[24px] font-semibold text-[#414853]">298</div>
+                                    <div className="text-[12px] text-[#ADB1BB]">Total Views</div>
+                                </div>
+                                <div>
+                                    <svg
+                                        width="60"
+                                        height="60"
+                                        viewBox="0 0 60 60"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <rect width="60" height="60" rx="5.21739" fill="#E0F2F0" />
+                                        <mask
+                                            id="mask0_2_467"
+                                            style={{ maskType: "alpha" }}
+                                            maskUnits="userSpaceOnUse"
+                                            x="10"
+                                            y="10"
+                                            width="40"
+                                            height="40"
+                                        >
+                                            <rect
+                                                x="10.4348"
+                                                y="10.4348"
+                                                width="39.1304"
+                                                height="39.1304"
+                                                fill="#D9D9D9"
+                                            />
+                                        </mask>
+                                        <g mask="url(#mask0_2_467)">
+                                            <path
+                                                d="M30.0035 35.8323C31.8511 35.8323 33.4202 35.1857 34.711 33.8925C36.0018 32.5993 36.6471 31.0289 36.6471 29.1813C36.6471 27.3338 36.0005 25.7646 34.7073 24.4739C33.4141 23.1831 31.8437 22.5377 29.9962 22.5377C28.1486 22.5377 26.5795 23.1843 25.2887 24.4775C23.9979 25.7708 23.3526 27.3411 23.3526 29.1887C23.3526 31.0362 23.9992 32.6054 25.2924 33.8962C26.5856 35.1869 28.156 35.8323 30.0035 35.8323ZM29.9998 33.5872C28.777 33.5872 27.7376 33.1592 26.8816 32.3032C26.0257 31.4472 25.5977 30.4078 25.5977 29.185C25.5977 27.9622 26.0257 26.9228 26.8816 26.0668C27.7376 25.2108 28.777 24.7828 29.9998 24.7828C31.2227 24.7828 32.2621 25.2108 33.1181 26.0668C33.974 26.9228 34.402 27.9622 34.402 29.185C34.402 30.4078 33.974 31.4472 33.1181 32.3032C32.2621 33.1592 31.2227 33.5872 29.9998 33.5872ZM30.0019 40.5981C26.2527 40.5981 22.8365 39.5638 19.7534 37.4953C16.6702 35.4271 14.4001 32.657 12.9431 29.185C14.4001 25.713 16.6694 22.9429 19.7509 20.8747C22.8327 18.8062 26.2484 17.772 29.9978 17.772C33.747 17.772 37.1632 18.8062 40.2463 20.8747C43.3295 22.9429 45.5996 25.713 47.0566 29.185C45.5996 32.657 43.3303 35.4271 40.2488 37.4953C37.167 39.5638 33.7513 40.5981 30.0019 40.5981ZM29.9998 38.1524C33.0705 38.1524 35.8898 37.344 38.4577 35.7271C41.0257 34.1103 42.989 31.9296 44.3477 29.185C42.989 26.4405 41.0257 24.2597 38.4577 22.6429C35.8898 21.026 33.0705 20.2176 29.9998 20.2176C26.9292 20.2176 24.1099 21.026 21.542 22.6429C18.974 24.2597 17.0107 26.4405 15.652 29.185C17.0107 31.9296 18.974 34.1103 21.542 35.7271C24.1099 37.344 26.9292 38.1524 29.9998 38.1524Z"
+                                                fill="#3AAFA9"
+                                            />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="rounded-md overflow-hidden">
+                            <Image
+                                src="/images/analiyst.png"
+                                width={4150}
+                                height={1150}
+                                alt="Analyst"
+                                className=" h-[290px] rounded-md"
+                            />
+                        </div>
+                    </div>
+                    <div className="flex gap-4 items-center rounded-lg mb-6">
+                        <div className="bg-white p-6 w-[555-px] h-[336px] rounded-md">
+                            <p className="text-sm font-semibold text-accent">
+                                Last Drafts{" "}
+                                <span className="inline-flex bg-primary p-1 rounded-lg text-white text-[10px] ml-2">
+                                    20
+                                </span>
+                            </p>
+                            <div className="flex items-center gap-4 mt-4">
+                                <div>
+                                    <Image
+                                        src="/images/jababeka.png"
+                                        width={100}
+                                        height={100}
+                                        alt="Jababeka"
+                                        className="w-[190px] h-[90px]"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className="text-[12px] text-[#414853] font-semibold">
+                                            Transforming Jababeka Residence Marketing Gallery with Cutting-Ed...
+                                        </h1>
+                                        <p className="text-[10px] text-[#53575B]">
+                                            Jababeka Residence, a leading property developer, is committed to enhancing
+                                            the visit...
+                                        </p>
+                                        <p className="text-[10px] text-[#53575B]">20 May 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr className="mt-4 text-gray-200" />
+
+                            <div className="flex items-center gap-4 mt-4">
+                                <div>
+                                    <Image
+                                        src="/images/room.png"
+                                        width={100}
+                                        height={100}
+                                        alt="Jababeka"
+                                        className="w-[190px] h-[90px]"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className="text-[12px] text-[#414853] font-semibold">
+                                            Enhancing Meeting Efficiency at PT Krakatau Bandar Samudera with...
+                                        </h1>
+                                        <p className="text-[10px] text-[#53575B]">
+                                            PT Krakatau Bandar Samudera, a leading logistics and port company, is
+                                            committed to...
+                                        </p>
+                                        <p className="text-[10px] text-[#53575B]">20 May 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-white p-6 w-[555-px] h-[336px] rounded-md">
+                            <p className="text-sm font-semibold text-accent">
+                                Last Projects{" "}
+                                <span className="inline-flex bg-primary p-1 rounded-lg text-white text-[10px] ml-2">
+                                    20
+                                </span>
+                            </p>
+                            <div className="flex items-center gap-4 mt-4">
+                                <div>
+                                    <Image
+                                        src="/images/jababeka.png"
+                                        width={100}
+                                        height={100}
+                                        alt="Jababeka"
+                                        className="w-[190px] h-[90px]"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className="text-[12px] text-[#414853] font-semibold">
+                                            Transforming Jababeka Residence Marketing Gallery with Cutting-Ed...
+                                        </h1>
+                                        <p className="text-[10px] text-[#53575B]">
+                                            Jababeka Residence, a leading property developer, is committed to enhancing
+                                            the visit...
+                                        </p>
+                                        <p className="text-[10px] text-[#53575B]">20 May 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr className="mt-4 text-gray-400" />
+
+                            <div className="flex items-center gap-4 mt-4">
+                                <div>
+                                    <Image
+                                        src="/images/room.png"
+                                        width={100}
+                                        height={100}
+                                        alt="Jababeka"
+                                        className="w-[190px] h-[90px]"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className="text-[12px] text-[#414853] font-semibold">
+                                            Enhancing Meeting Efficiency at PT Krakatau Bandar Samudera with...
+                                        </h1>
+                                        <p className="text-[10px] text-[#53575B]">
+                                            PT Krakatau Bandar Samudera, a leading logistics and port company, is
+                                            committed to...
+                                        </p>
+                                        <p className="text-[10px] text-[#53575B]">20 May 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>
