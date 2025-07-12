@@ -3,6 +3,7 @@
 @theme {
     --color-primary: #3aafa9;
     --color-secondary: #e0f2f0;
+    --color-accent: #414853;
 }
 
 /* Fix for browser extension hydration issues */

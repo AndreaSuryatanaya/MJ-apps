@@ -10,9 +10,9 @@ export default function SignInPage() {
     };
 
     return (
-        <section>
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="bg-white p-15 shadow-md w-[479px] max-w-md flex flex-col space-y-8">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-center min-h-screen py-4 sm:py-8 ">
+                <div className="bg-white p-6 sm:p-8 md:p-15 shadow-md w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[479px] sm:h-[631px] md:h-[640px] lg:h-[680px] flex flex-col space-y-6 sm:space-y-8">
                     <div>
                         <div className="flex items-center justify-center">
                             <svg
@@ -22,7 +22,7 @@ export default function SignInPage() {
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"
-                                className="h-[46px] w-[132px]"
+                                className="h-[40px] sm:h-[46px] w-[100px] sm:w-[132px] md:w-[132px]"
                             >
                                 <rect x="0.5" width="132" height="46" fill="url(#pattern0_1_14)" />
                                 <defs>
@@ -49,32 +49,32 @@ export default function SignInPage() {
                         </div>
                     </div>
                     <form action="">
-                        <div className="flex flex-col items-start gap-2">
-                            <h1 className="text-primary text-2xl mt-15">Login</h1>
-                            <p className="text-sm text-gray-500">
+                        <div className="flex flex-col items-start gap-2 sm:gap-3">
+                            <h1 className="text-primary text-xl sm:text-2xl mt-8 sm:mt-15">Login</h1>
+                            <p className="text-xs sm:text-sm text-gray-500">
                                 Thankyou for get back to <span className="text-primary">MJ Solution Photobooth</span>
                             </p>
-                            <label htmlFor="" className="mt-4 text-[16px] text-[#414853]">
+                            <label htmlFor="" className="mt-3 sm:mt-4 text-sm sm:text-[16px] text-[#414853]">
                                 Username
                             </label>
                             <input
                                 type="text"
                                 placeholder="Email or Username"
-                                className="w-full border-1 border-gray-200 h-[53px] text-[14px] placeholder:text-[#ADB1BB] p-4"
+                                className="w-full border-1 border-gray-200 h-[45px] sm:h-[53px] text-xs sm:text-[14px] placeholder:text-[#ADB1BB] p-3 sm:p-4"
                             />
-                            <label htmlFor="" className="mt-4 text-[16px] text-[#414853]">
+                            <label htmlFor="" className="mt-3 sm:mt-4 text-sm sm:text-[16px] text-[#414853]">
                                 Password
                             </label>
                             <div className="relative w-full">
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Password"
-                                    className="w-full border-1 border-gray-200 h-[53px] text-[14px] placeholder:text-[#ADB1BB] p-4 pr-16 "
+                                    className="w-full border-1 border-gray-200 h-[45px] sm:h-[53px] text-xs sm:text-[14px] placeholder:text-[#ADB1BB] p-3 sm:p-4 pr-12 sm:pr-16"
                                 />
                                 <button
                                     type="button"
                                     onClick={togglePasswordVisibility}
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none flex items-center justify-center w-8 h-8"
+                                    className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none flex items-center justify-center w-6 sm:w-8 h-6 sm:h-8"
                                 >
                                     {showPassword ? (
                                         // Eye slash icon (password visible)
@@ -84,7 +84,7 @@ export default function SignInPage() {
                                             viewBox="0 0 20 17"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="w-5 h-5"
+                                            className="w-4 sm:w-5 h-4 sm:h-5"
                                         >
                                             <path
                                                 d="M13.4168 9.08331L12.2085 7.87498C12.3335 7.2222 12.146 6.61109 11.646 6.04165C11.146 5.4722 10.5002 5.24998 9.7085 5.37498L8.50016 4.16665C8.73628 4.05553 8.97586 3.9722 9.21891 3.91665C9.46197 3.86109 9.72239 3.83331 10.0002 3.83331C11.0418 3.83331 11.9272 4.1979 12.6564 4.92706C13.3856 5.65623 13.7502 6.54165 13.7502 7.58331C13.7502 7.86109 13.7224 8.12151 13.6668 8.36456C13.6113 8.60762 13.5279 8.8472 13.4168 9.08331ZM16.0835 11.7083L14.8752 10.5416C15.4029 10.1389 15.8717 9.6979 16.2814 9.21873C16.6911 8.73956 17.0418 8.19442 17.3335 7.58331C16.6391 6.18053 15.6425 5.06595 14.3439 4.23956C13.0453 3.41317 11.5974 2.99998 10.0002 2.99998C9.59739 2.99998 9.20155 3.02776 8.81266 3.08331C8.42378 3.13887 8.04183 3.2222 7.66683 3.33331L6.37516 2.04165C6.94461 1.80554 7.52794 1.62845 8.12516 1.5104C8.72239 1.39234 9.34739 1.33331 10.0002 1.33331C12.0974 1.33331 13.9654 1.91317 15.6043 3.0729C17.2432 4.23262 18.4307 5.73609 19.1668 7.58331C18.8474 8.40276 18.4273 9.16317 17.9064 9.86456C17.3856 10.566 16.7779 11.1805 16.0835 11.7083ZM16.5002 16.8333L13.0002 13.375C12.5141 13.5278 12.0245 13.6423 11.5314 13.7187C11.0384 13.7951 10.5279 13.8333 10.0002 13.8333C7.90294 13.8333 6.03489 13.2535 4.396 12.0937C2.75711 10.934 1.56961 9.43053 0.833496 7.58331C1.12516 6.8472 1.49322 6.16317 1.93766 5.53123C2.38211 4.89928 2.88905 4.33331 3.4585 3.83331L1.16683 1.49998L2.3335 0.333313L17.6668 15.6666L16.5002 16.8333ZM4.62516 4.99998C4.22239 5.36109 3.85433 5.75692 3.521 6.18748C3.18766 6.61803 2.90294 7.08331 2.66683 7.58331C3.36127 8.98609 4.3578 10.1007 5.65641 10.9271C6.95503 11.7535 8.40294 12.1666 10.0002 12.1666C10.2779 12.1666 10.5488 12.1493 10.8127 12.1146C11.0766 12.0798 11.3474 12.0416 11.6252 12L10.8752 11.2083C10.7224 11.25 10.5766 11.2812 10.4377 11.3021C10.2988 11.3229 10.1529 11.3333 10.0002 11.3333C8.9585 11.3333 8.07308 10.9687 7.34391 10.2396C6.61475 9.5104 6.25016 8.62498 6.25016 7.58331C6.25016 7.43053 6.26058 7.2847 6.28141 7.14581C6.30225 7.00692 6.3335 6.86109 6.37516 6.70831L4.62516 4.99998Z"
@@ -94,7 +94,7 @@ export default function SignInPage() {
                                     ) : (
                                         // Eye icon (password hidden)
                                         <svg
-                                            className="w-5 h-5"
+                                            className="w-4 sm:w-5 h-4 sm:h-5"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
@@ -118,14 +118,14 @@ export default function SignInPage() {
                             </div>
                             <button
                                 type="submit"
-                                className="w-full bg-primary text-center text-white text-[12px] h-[48px] mt-4"
+                                className="w-full bg-primary text-center text-white text-xs sm:text-[12px] h-[40px] sm:h-[48px] mt-3 sm:mt-4 hover:bg-primary/90 transition-colors"
                             >
                                 SIGN IN
                             </button>
                         </div>
                     </form>
                     <div></div>
-                    <p className="text-center text-[12px] text-primary">By MJ Solution Indonesia</p>
+                    <p className="text-center text-[10px] sm:text-[12px] text-primary">By MJ Solution Indonesia</p>
                 </div>
             </div>
         </section>
