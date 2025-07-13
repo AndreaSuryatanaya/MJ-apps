@@ -6,7 +6,7 @@ import Chart from "../_components/Chart";
 export default function MainSection() {
     return (
         <main className="p-4 lg:p-7 w-full flex flex-col">
-            <div className="w-full lg:w-[1140px] h-auto lg:h-[68px] flex flex-col md:flex-row items-start md:items-center md:justify-between bg-white rounded-sm px-6 md:px-8 py-3 mb-6 gap-4">
+            <div className="w-full lg:w-[1140px] h-auto lg:h-[68px] flex flex-col md:flex-row items-start md:items-center md:justify-between bg-white rounded-sm px-6 md:px-8 py-3 mt-2 md:mt-0 mb-6 gap-4">
                 <div className="flex items-center gap-3">
                     <div>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
