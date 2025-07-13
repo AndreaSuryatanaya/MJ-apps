@@ -64,7 +64,7 @@ export default function MainSection() {
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-5 lg:col-span-1 w-full">
                     {/* Statistic Card 1 */}
                     <div className="w-full h-[173px] md:h-[133px] flex flex-col sm:flex-row-reverse justify-between items-center sm:items-start bg-white p-4 sm:p-5 rounded-lg md:items-center md:justify-center md:px-10 lg:items-center lg:justify-center">
-                        <div className="mb-4 w-[60px] h-[60px] sm:mb-0 sm:ml-4 flex-shrink-0 bg-amber-200">
+                        <div className="mb-4 w-[60px] h-[60px] sm:mb-0 sm:ml-4 flex-shrink-0 bg-white">
                             {/* SVG */}
                             <Content1SVG />
                         </div>
