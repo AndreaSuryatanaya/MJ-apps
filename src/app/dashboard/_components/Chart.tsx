@@ -116,7 +116,7 @@ const Chart = () => {
     }, []);
 
     return (
-        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 w-auto">
+        <div className="bg-amber-200 p-4 rounded-lg shadow-sm border border-gray-200">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-base font-semibold text-gray-900">Analytics Summary</h2>
                 <div className="relative">
