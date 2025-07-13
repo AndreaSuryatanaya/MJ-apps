@@ -1,9 +1,39 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function SignInPage() {
     const [showPassword, setShowPassword] = useState(false);
+
+    const [email, setEmail] = useState("admin@example.com");
+    const [password, setPassword] = useState("qwerty");
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState("");
+    const router = useRouter();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setError("");
+
+        try {
+            if (email === "admin@example.com" && password === "qwerty") {
+                // Set authentication cookie/token
+                document.cookie = "auth-token=authenticated; path=/; max-age=86400"; // 24 hours
+
+                // Redirect to dashboard
+                router.push("/dashboard");
+            } else {
+                setError("Invalid email or password");
+            }
+        } catch {
+            setError("An error occurred during sign in");
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -48,7 +78,12 @@ export default function SignInPage() {
                             </svg>
                         </div>
                     </div>
-                    <form action="">
+                    <form onSubmit={handleSubmit} className="">
+                        {error && (
+                            <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-md text-sm">
+                                {error}
+                            </div>
+                        )}
                         <div className="flex flex-col items-start gap-2 sm:gap-3">
                             <h1 className="text-primary text-xl sm:text-2xl mt-8 sm:mt-15">Login</h1>
                             <p className="text-xs sm:text-sm text-gray-500">
@@ -58,8 +93,14 @@ export default function SignInPage() {
                                 Username
                             </label>
                             <input
+                                id="email"
+                                name="email"
                                 type="text"
-                                placeholder="Email or Username"
+                                autoComplete="email"
+                                required
+                                defaultValue="admin@example.com"
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Enter username or email"
                                 className="w-full border-1 border-gray-200 h-[45px] sm:h-[53px] text-xs sm:text-[14px] placeholder:text-[#ADB1BB] p-3 sm:p-4"
                             />
                             <label htmlFor="" className="mt-3 sm:mt-4 text-sm sm:text-[16px] text-[#414853]">
@@ -68,6 +109,12 @@ export default function SignInPage() {
                             <div className="relative w-full">
                                 <input
                                     type={showPassword ? "text" : "password"}
+                                    id="password"
+                                    name="password"
+                                    autoComplete="current-password"
+                                    required
+                                    defaultValue="qwerty"
+                                    onChange={(e) => setPassword(e.target.value)}
                                     placeholder="Password"
                                     className="w-full border-1 border-gray-200 h-[45px] sm:h-[53px] text-xs sm:text-[14px] placeholder:text-[#ADB1BB] p-3 sm:p-4 pr-12 sm:pr-16"
                                 />
@@ -119,8 +166,9 @@ export default function SignInPage() {
                             <button
                                 type="submit"
                                 className="w-full bg-primary text-center text-white text-xs sm:text-[12px] h-[40px] sm:h-[48px] mt-3 sm:mt-4 hover:bg-primary/90 transition-colors"
+                                disabled={isLoading}
                             >
-                                SIGN IN
+                                {isLoading ? <p>Signing in...</p> : "Sign in"}
                             </button>
                         </div>
                     </form>

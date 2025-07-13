@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-// import Chart from "./_components/Chart";
 import { useState } from "react";
+import ButtonLogout from "./_components/ButtonLogout";
 
 export default function DashboardPage() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -302,6 +302,7 @@ export default function DashboardPage() {
                                 </a>
                             </li>
                         </ul>
+                        <ButtonLogout />
                     </div>
                 </div>
                 <nav id="sidebar" className="hidden lg:block">
@@ -414,6 +415,7 @@ export default function DashboardPage() {
                                 </a>
                             </li>
                         </ul>
+                        <ButtonLogout />
                     </div>
                 </nav>
                 <main className="p-4 lg:p-7 w-full flex flex-col">
