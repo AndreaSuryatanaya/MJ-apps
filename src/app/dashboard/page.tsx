@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import ButtonLogout from "./_components/ButtonLogout";
+import Chart from "./_components/Chart";
 
 export default function DashboardPage() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -585,8 +586,8 @@ export default function DashboardPage() {
                         </div>
 
                         {/* Chart */}
-                        <div className="w-full lg:w-[829px] h-[290px] lg:col-span-3 bg-white rounded-md flex items-start justify-center lg:ml-4">
-                            {/* <Chart /> */}
+                        <div className="w-full lg:w-[829px] h-[290px] lg:col-span-3 bg-white rounded-md flex items-center justify-center lg:ml-4">
+                            <Chart />
                         </div>
                     </div>
 

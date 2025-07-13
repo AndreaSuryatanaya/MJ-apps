@@ -49,14 +49,14 @@ const Chart = () => {
                             label: "News",
                             data: [85, 145, 170, 125, 85, 260, 235, 140, 175, 170, 205, 170],
                             backgroundColor: "#5EEAD4",
-                            borderRadius: 4,
+                            borderRadius: 0,
                             borderSkipped: false,
                         },
                         {
                             label: "Projects",
                             data: [90, 95, 175, 140, 165, 215, 290, 175, 210, 205, 240, 175],
                             backgroundColor: "#E5E7EB",
-                            borderRadius: 4,
+                            borderRadius: 0,
                             borderSkipped: false,
                         },
                     ],
@@ -70,7 +70,7 @@ const Chart = () => {
                             backgroundColor: "rgba(0, 0, 0, 0.8)",
                             titleColor: "white",
                             bodyColor: "white",
-                            cornerRadius: 6,
+                            cornerRadius: 0,
                             callbacks: {
                                 label: (context) => `${context.dataset.label}: ${context.parsed.y}`,
                             },
@@ -116,11 +116,11 @@ const Chart = () => {
     }, []);
 
     return (
-        <div className="bg-amber-200 p-4 rounded-lg shadow-sm border border-gray-200">
+        <div className="bg-transparent p-4">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-base font-semibold text-gray-900">Analytics Summary</h2>
+                <h2 className="text-sm md:text-base font-medium text-accent">Analytics Summary</h2>
                 <div className="relative">
-                    <select className="appearance-none bg-white border border-gray-300 rounded-md px-3 py-1.5 pr-8 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select className="appearance-none bg-white border border-gray-300 rounded-md px-3 py-1.5 pr-8 text-sm text-gray-700">
                         <option value="years">Years</option>
                         <option value="months">Months</option>
                         <option value="days">Days</option>
@@ -147,7 +147,7 @@ const Chart = () => {
                 </div>
             </div>
 
-            <div className="relative h-[120px] md:h-[150px] lg:h-[180px]">
+            <div className="w-[310px] md:w-[650px] lg:w-[800px] md:h-[170px] lg:h-[173px]">
                 <canvas ref={chartRef} className="w-full h-full"></canvas>
             </div>
         </div>
